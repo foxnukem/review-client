@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Review</title>
+</head>
+<body>
+<div th:replace="header"></div>
+<br>
+<div class="col-md-offset-3 col-sm-6">
+    <table class="table">
+        <tr>
+            <td>Id:</td>
+            <td th:text="${review.id}"></td>
+        </tr>
+        <tr>
+            <td>Text:</td>
+            <td th:text="${review.text}"></td>
+        </tr>
+        <tr>
+            <td>Rating:</td>
+            <td th:text="${review.rating}"></td>
+        </tr>
+        <tr>
+            <td>User email:</td>
+            <td th:text="${review.user.email}"></td>
+        </tr>
+        <tr>
+            <td>User name:</td>
+            <td th:text="${review.user.name}"></td>
+        </tr>
+        <tr>
+            <td>User surname:</td>
+            <td th:text="${review.user.surname}"></td>
+        </tr>
+    </table>
+</div>
+<br>
+<div class="col-md-offset-3 col-sm-6">
+    <a class="btn-lg btn-info" href="/">Go to all reviews</a>
+</div>
+</body>
+</html>
